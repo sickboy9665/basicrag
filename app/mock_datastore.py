@@ -21,7 +21,7 @@ def retrieve_contexts(query: str, top_k: int = 5) -> list[dict]:
     Simulate retrieval of job descriptions based on the query.
     """
     try:
-        # Simple mock logic: Find jobs where the title contains the query (case-insensitive)
+        # Find jobs where the title contains the query
         results = [
             job for job in mock_data["jobs"] if query.lower() in job["title"].lower()
         ]

@@ -4,10 +4,8 @@ from schemas import QueryRequest
 from services import generate_streaming_response
 import logging
 
-# Initialize FastAPI app
 app = FastAPI()
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 

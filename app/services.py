@@ -10,9 +10,8 @@ def generate_streaming_response(query: str, top_k: int = 5) -> Generator[str, No
     Generate a streaming response by combining retrieved contexts and the user query.
     """
     try:
-        # Handle invalid top_k
         if top_k <= 0:
-            top_k = 5  # Default to 5 if invalid
+            top_k = 5  # Default 5 if invalid
             yield "Warning: 'top_k' was invalid. Using default value of 5.\n"
 
         # Retrieve relevant contexts
@@ -24,7 +23,7 @@ def generate_streaming_response(query: str, top_k: int = 5) -> Generator[str, No
 
         logger.info(f"Retrieved {len(contexts)} contexts for query '{query}'. Streaming response...")
 
-        # Mock generation logic: Combine query with retrieved contexts
+        # Combine query with retrieved contexts
         for i, context in enumerate(contexts, start=1):
             logger.info(f"Streaming Step {i}: {context['title']} - {context['description']}")
             yield f"{i}: {context['title']} - {context['description']}\n"

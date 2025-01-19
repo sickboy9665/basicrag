@@ -19,6 +19,11 @@ Setup
 ##### Prerequisites
 Ensure you have Python 3.7+ installed on your system.
 
+#### Virtual ENV
+Create a virtual environment if needed.
+type "python -m venv virtualenvname, open cmd and navigate to the project directory, then activate the virtual environment using "virtualenvname/bin/activate"
+
+
 ##### Install Dependencies
 To install the required dependencies, run the following command:
 pip install -r requirements.txt
